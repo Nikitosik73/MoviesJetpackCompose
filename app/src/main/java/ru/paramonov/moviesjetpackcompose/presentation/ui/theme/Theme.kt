@@ -1,4 +1,4 @@
-package ru.paramonov.moviesjetpackcompose.ui.theme
+package ru.paramonov.moviesjetpackcompose.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
