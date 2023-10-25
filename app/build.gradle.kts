@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "ru.paramonov.moviesjetpackcompose"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "ru.paramonov.moviesjetpackcompose"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -42,7 +42,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packaging {
         resources {
@@ -89,12 +89,15 @@ dependencies {
     val okhttpVersion = "4.9.3"
     implementation("com.squareup.okhttp3:logging-interceptor:$okhttpVersion")
     // Dagger 2
-    val daggerVersion = "2.46.1"
-    implementation("com.google.dagger:dagger:2.46.1")
-    kapt("com.google.dagger:dagger-compiler:2.46.1")
+    val daggerVersion = "2.48"
+    implementation("com.google.dagger:dagger:$daggerVersion")
+    ksp("com.google.dagger:dagger-compiler:$daggerVersion")
     // Room
     val roomVersion = "2.6.0"
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation ("androidx.room:room-ktx:$roomVersion")
     ksp ("androidx.room:room-compiler:$roomVersion")
+    // Vk
+    implementation("com.vk:android-sdk-core:4.1.0")
+    implementation("com.vk:android-sdk-api:4.1.0")
 }
