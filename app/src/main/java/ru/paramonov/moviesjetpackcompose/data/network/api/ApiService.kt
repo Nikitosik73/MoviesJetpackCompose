@@ -4,13 +4,15 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import ru.paramonov.moviesjetpackcompose.data.network.model.movie.MovieResponseDto
 import ru.paramonov.moviesjetpackcompose.data.network.model.review.ReviewResponseDto
+import ru.paramonov.moviesjetpackcompose.data.network.model.trailer.TrailerResponseDto
 
 interface ApiService {
 
-    @GET("v1.3/movie?search=4-8")
+    @GET("v1.3/movie")
     suspend fun getAllMoviesResponse(
         @Query(TOKEN) token: String = TOKEN_VALUE,
         @Query(FIELD) field: String = "rating.kp",
+        @Query(SEARCH) search: String = "4-8",
         @Query(SORT_FIELD) sortField: String = "votes.kp",
         @Query(SORT_TYPE) sortType: String = "-1",
         @Query(LIMIT) limit: Int = 20,
@@ -29,6 +31,13 @@ interface ApiService {
         @Query(QUERY) query: String
     ): MovieResponseDto
 
+    @GET("v1.3/movie")
+    suspend fun getTrailersByMovieId(
+        @Query(TOKEN) token: String = TOKEN_VALUE,
+        @Query(SELECT_FIELDS) selectFields: String = "videos.trailers.url",
+        @Query(ID) id: Int
+    ): TrailerResponseDto
+
     companion object {
         private const val TOKEN = "token"
         private const val FIELD = "field"
@@ -38,6 +47,9 @@ interface ApiService {
         private const val PAGE = "page"
         private const val MOVIE_ID = "movieId"
         private const val QUERY = "query"
+        private const val SEARCH = "search"
+        private const val SELECT_FIELDS = "selectFields"
+        private const val ID = "id"
 
         private const val TOKEN_VALUE = "RAK4ET6-CNK4HSY-M72HXTB-AJVPAH4"
     }
