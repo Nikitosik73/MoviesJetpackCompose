@@ -3,10 +3,11 @@ package ru.paramonov.moviesjetpackcompose.domain.usecases
 import kotlinx.coroutines.flow.StateFlow
 import ru.paramonov.moviesjetpackcompose.domain.entity.MovieUI
 import ru.paramonov.moviesjetpackcompose.domain.repository.MovieRepository
+import javax.inject.Inject
 
-class GetAllMoviesUseCase(
+class GetAllMoviesUseCase @Inject constructor(
     private val repository: MovieRepository
 ) {
 
-    operator fun invoke(page: Int): StateFlow<List<MovieUI>> = repository.getAllMovies(page = page)
+    operator fun invoke(): StateFlow<List<MovieUI>> = repository.getAllMovies()
 }
