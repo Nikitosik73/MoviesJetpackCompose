@@ -1,5 +1,6 @@
 package ru.paramonov.moviesjetpackcompose.domain.repository
 
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 import ru.paramonov.moviesjetpackcompose.domain.entity.AuthState
 import ru.paramonov.moviesjetpackcompose.domain.entity.MovieUI
@@ -12,9 +13,11 @@ interface MovieRepository {
 
     suspend fun checkAuthState()
 
-    fun getAllMovies(page: Int): StateFlow<List<MovieUI>>
+    fun getAllMovies(): StateFlow<List<MovieUI>>
 
-    fun getMoviesByName(query: String): StateFlow<List<MovieUI>>
+    suspend fun loadNextMovies()
+
+    fun getMoviesByName(query: String): Flow<List<MovieUI>>
 
     fun getReviews(movieId: Int): StateFlow<List<ReviewUI>>
 
