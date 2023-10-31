@@ -19,6 +19,7 @@ import ru.paramonov.moviesjetpackcompose.domain.entity.AuthState
 import ru.paramonov.moviesjetpackcompose.presentation.app.getApplicationComponent
 import ru.paramonov.moviesjetpackcompose.presentation.screens.login.LoginScreen
 import ru.paramonov.moviesjetpackcompose.presentation.screens.login.LoginViewModel
+import ru.paramonov.moviesjetpackcompose.presentation.screens.mainscreen.MainScreen
 import ru.paramonov.moviesjetpackcompose.presentation.ui.theme.MoviesJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -36,13 +37,7 @@ class MainActivity : ComponentActivity() {
             MoviesJetpackComposeTheme {
                 when(authViewState.value) {
                     AuthState.Authorized -> {
-                        // аторизация прошла успешно
-                        Box(
-                            modifier = Modifier.fillMaxSize(),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(text = "Вы Авторизованы", fontWeight = FontWeight.Bold, fontSize = 22.sp)
-                        }
+                        MainScreen()
                     }
                     AuthState.NotAuthorized -> {
                         LoginScreen {

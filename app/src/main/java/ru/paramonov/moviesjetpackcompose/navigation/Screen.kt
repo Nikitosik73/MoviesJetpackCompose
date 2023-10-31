@@ -20,7 +20,7 @@ sealed class Screen(
 
         fun getRouteWithArgs(movie: MovieUI): String {
             val movieJson = Gson().toJson(movie).encode()
-            return "$MOVIE_ROUTE_FOR_ARGS/$movie"
+            return "$MOVIE_ROUTE_FOR_ARGS/$movieJson"
         }
     }
 
