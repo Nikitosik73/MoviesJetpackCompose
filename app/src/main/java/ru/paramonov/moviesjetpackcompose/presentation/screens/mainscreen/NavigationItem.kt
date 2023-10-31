@@ -17,7 +17,7 @@ sealed class NavigationItem(
 ) {
 
     object Home : NavigationItem(
-        screen = Screen.MovieScreen,
+        screen = Screen.Home,
         titleResId = R.string.home,
         selectedIcon = Icons.Rounded.Home,
         unselectedIcon = Icons.Outlined.Home
