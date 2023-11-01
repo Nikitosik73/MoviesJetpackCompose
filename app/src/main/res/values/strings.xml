@@ -4,5 +4,6 @@
     <string name="greeting">Добро пожаловать, в</string>
     <string name="home">Главная</string>
     <string name="favorite">Избранное</string>
+    <string name="movies">Фильмы</string>
     <integer name="com_vk_sdk_AppId">51781943</integer>
 </resources>
