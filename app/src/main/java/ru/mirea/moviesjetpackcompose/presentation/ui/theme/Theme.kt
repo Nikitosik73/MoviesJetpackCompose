@@ -1,4 +1,4 @@
-package ru.mirea.moviesjetpackcompose.presentation.ui.theme
+package ru.paramonov.moviesjetpackcompose.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -10,8 +10,6 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.LightGray
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
