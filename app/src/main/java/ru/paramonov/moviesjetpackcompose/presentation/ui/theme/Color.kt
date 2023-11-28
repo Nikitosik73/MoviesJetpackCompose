@@ -12,3 +12,7 @@ val Pink40 = Color(0xFF7D5260)
 
 val LightGrey = Color(0xfff5f5f5)
 val VkDefault = Color(0xff0077ff)
+
+val Black500 = Color(0xff9a9b9d)
+val Black900 = Color(0xff191919)
+val LightGray = Color(0xfff5f5f5)
