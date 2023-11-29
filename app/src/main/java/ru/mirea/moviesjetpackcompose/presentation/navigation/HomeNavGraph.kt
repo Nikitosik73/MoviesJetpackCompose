@@ -1,4 +1,4 @@
-package ru.paramonov.moviesjetpackcompose.presentation.navigation
+package ru.mirea.moviesjetpackcompose.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavGraphBuilder
@@ -7,7 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navigation
 import com.google.gson.Gson
-import ru.paramonov.moviesjetpackcompose.domain.entity.MovieUI
+import ru.mirea.moviesjetpackcompose.domain.entity.MovieUI
 
 fun NavGraphBuilder.homeScreenNavGraph(
     movieScreenContent: @Composable () -> Unit,

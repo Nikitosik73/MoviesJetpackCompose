@@ -1,4 +1,4 @@
-package ru.mirea.moviesjetpackcompose.navigation
+package ru.mirea.moviesjetpackcompose.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -7,13 +7,13 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import ru.mirea.moviesjetpackcompose.domain.entity.MovieUI
 
-class NavigationState(
+class AppNavigationState(
     val navHostController: NavHostController
 ) {
 
-    fun navigateTo(route: String) {
+    fun navigateToScreen(route: String) {
         navHostController.navigate(route = route) {
-            popUpTo (navHostController.graph.findStartDestination().id) {
+            popUpTo(navHostController.graph.findStartDestination().id) {
                 saveState = true
             }
             launchSingleTop = true
@@ -21,14 +21,15 @@ class NavigationState(
         }
     }
 
-    fun navigateToDetailScreen(movie: MovieUI) {
-        navHostController.navigate(route = Screen.DetailMovieScreen.getRouteWithArgs(movie = movie))
+    fun navigateToMovieDetailScreen(movie: MovieUI) {
+        navHostController
+            .navigate(route = Screen.MovieDetail.getRouteMovieDetailWithArgs(movie = movie))
     }
 }
 
 @Composable
-fun rememberNavigateState(
+fun rememberAppNavigationState(
     navHostController: NavHostController = rememberNavController()
-): NavigationState = remember {
-    NavigationState(navHostController = navHostController)
+): AppNavigationState = remember {
+    AppNavigationState(navHostController = navHostController)
 }

@@ -1,4 +1,4 @@
-package ru.paramonov.moviesjetpackcompose.presentation.screens.main
+package ru.mirea.moviesjetpackcompose.presentation.screens.main
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -24,13 +24,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
-import ru.paramonov.moviesjetpackcompose.presentation.navigation.AppNavGraph
-import ru.paramonov.moviesjetpackcompose.presentation.navigation.AppNavigationState
-import ru.paramonov.moviesjetpackcompose.presentation.navigation.rememberAppNavigationState
-import ru.paramonov.moviesjetpackcompose.presentation.screens.detailmovie.DetailMovieScreen
-import ru.paramonov.moviesjetpackcompose.presentation.screens.favoritemovie.FavoriteMovieScreen
-import ru.paramonov.moviesjetpackcompose.presentation.screens.movies.MoviesScreen
-import ru.paramonov.moviesjetpackcompose.presentation.ui.theme.VkDefault
+import ru.mirea.moviesjetpackcompose.presentation.navigation.AppNavGraph
+import ru.mirea.moviesjetpackcompose.presentation.navigation.AppNavigationState
+import ru.mirea.moviesjetpackcompose.presentation.navigation.rememberAppNavigationState
+import ru.mirea.moviesjetpackcompose.presentation.screens.detailmovie.DetailMovieScreen
+import ru.mirea.moviesjetpackcompose.presentation.screens.favoritemovie.FavoriteMovieScreen
+import ru.mirea.moviesjetpackcompose.presentation.screens.movies.MoviesScreen
+import ru.mirea.moviesjetpackcompose.presentation.ui.theme.VkDefault
 
 @Composable
 fun MovieMainScreen() {

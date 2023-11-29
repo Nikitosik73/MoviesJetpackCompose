@@ -1,4 +1,4 @@
-package ru.paramonov.moviesjetpackcompose.presentation.screens.main
+package ru.mirea.moviesjetpackcompose.presentation.screens.main
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FavoriteBorder
@@ -7,7 +7,7 @@ import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.material.icons.rounded.Home
 import androidx.compose.ui.graphics.vector.ImageVector
 import ru.paramonov.moviesjetpackcompose.R
-import ru.paramonov.moviesjetpackcompose.presentation.navigation.Screen
+import ru.mirea.moviesjetpackcompose.presentation.navigation.Screen
 
 sealed class NavigationItem(
     val screen: Screen,

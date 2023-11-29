@@ -1,8 +1,8 @@
-package ru.paramonov.moviesjetpackcompose.presentation.navigation
+package ru.mirea.moviesjetpackcompose.presentation.navigation
 
 import android.net.Uri
 import com.google.gson.Gson
-import ru.paramonov.moviesjetpackcompose.domain.entity.MovieUI
+import ru.mirea.moviesjetpackcompose.domain.entity.MovieUI
 
 sealed class Screen(
     val route: String

@@ -6,7 +6,6 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import ru.mirea.moviesjetpackcompose.di.annotation.ViewModelKey
 import ru.mirea.moviesjetpackcompose.presentation.screens.login.LoginViewModel
-import ru.mirea.moviesjetpackcompose.presentation.screens.movies.MovieViewModel
 
 @Module
 interface ViewModelModule {
@@ -18,10 +17,4 @@ interface ViewModelModule {
         impl: LoginViewModel
     ): ViewModel
 
-    @Binds
-    @IntoMap
-    @ViewModelKey(value = MovieViewModel::class)
-    fun bindMovieViewModel(
-        impl: MovieViewModel
-    ): ViewModel
 }

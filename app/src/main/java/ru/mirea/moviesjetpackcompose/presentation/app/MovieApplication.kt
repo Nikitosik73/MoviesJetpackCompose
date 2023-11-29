@@ -6,6 +6,7 @@ import androidx.compose.ui.platform.LocalContext
 import ru.mirea.moviesjetpackcompose.di.component.ApplicationComponent
 import ru.mirea.moviesjetpackcompose.di.component.DaggerApplicationComponent
 
+
 class MovieApplication : Application() {
 
     val component by lazy {

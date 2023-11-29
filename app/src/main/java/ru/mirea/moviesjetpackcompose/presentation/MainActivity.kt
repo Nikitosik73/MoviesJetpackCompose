@@ -1,4 +1,4 @@
-package ru.paramonov.moviesjetpackcompose.presentation
+package ru.mirea.moviesjetpackcompose.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,20 +6,17 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.vk.api.sdk.VK
 import com.vk.api.sdk.auth.VKScope
-import ru.paramonov.moviesjetpackcompose.domain.entity.AuthState
-import ru.paramonov.moviesjetpackcompose.presentation.app.getApplicationComponent
-import ru.paramonov.moviesjetpackcompose.presentation.screens.login.LoginScreen
-import ru.paramonov.moviesjetpackcompose.presentation.screens.login.LoginViewModel
-import ru.paramonov.moviesjetpackcompose.presentation.screens.main.MovieMainScreen
+import ru.mirea.moviesjetpackcompose.domain.entity.AuthState
+import ru.mirea.moviesjetpackcompose.presentation.app.getApplicationComponent
+import ru.mirea.moviesjetpackcompose.presentation.screens.login.LoginScreen
+import ru.mirea.moviesjetpackcompose.presentation.screens.login.LoginViewModel
+import ru.mirea.moviesjetpackcompose.presentation.screens.main.MovieMainScreen
 import ru.paramonov.moviesjetpackcompose.presentation.ui.theme.MoviesJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {

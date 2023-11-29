@@ -1,6 +1,7 @@
-package ru.paramonov.moviesjetpackcompose.presentation.screens.movies
+package ru.mirea.moviesjetpackcompose.presentation.screens.movies
 
-import ru.paramonov.moviesjetpackcompose.domain.entity.MovieUI
+import ru.mirea.moviesjetpackcompose.domain.entity.MovieUI
+
 
 sealed class MovieScreenState {
 
